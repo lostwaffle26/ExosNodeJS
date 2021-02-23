@@ -9,15 +9,15 @@ function add(numberToAdd) {
     }
     else {
         if (numbers.length > 1) {
-            const numberReadyToAdd = [];
-            let addResult = 0;
+
+            // addResult = parseInt(numbers[i], 10);
+             
+            let addResult = numbers.reduce(function (acc, current) {
+                return acc = parseInt(acc, 10) + parseInt(current, 10);
+            })
 
             for (let i = 0; i < numbers.length; i = i + 1) {
-                numberReadyToAdd.push(parseInt(numbers[1], 10));
-            }
-
-            for (let i = 0; i < numberReadyToAdd.length; i = i + 1) {
-                addResult = addResult + numberReadyToAdd[1];
+                addResult = addResult + parseInt(numbers[1], 10);
             }
 
             return addResult;
