@@ -1,8 +1,8 @@
 function add(numberToAdd) {
-    console.log('valeur de "numberToAdd:" ' + numberToAdd);
+    console.log('valeur de "numberToAdd" : ' + numberToAdd);
 
     const numbers = numberToAdd.split(',');
-    console.log('valeur de "numbers:" ', numbers);
+    console.log('valeur de "numbers" : ', numbers);
 
     if (numberToAdd === '') {
         return '0';
@@ -19,6 +19,8 @@ function add(numberToAdd) {
             for (let i = 0; i < numberReadyToAdd.length; i = i + 1) {
                 addResult = addResult + numberReadyToAdd[1];
             }
+
+            return addResult;
         }
         else {
             return addResult;
@@ -27,3 +29,5 @@ function add(numberToAdd) {
 }
 
 const result = add('1, 2');
+
+console.log('result : ' + result);
